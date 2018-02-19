@@ -1,0 +1,256 @@
+/* !Date:12.06.2017 Copyright ©2017-2018 CSS Code by Cătălin Anghel-Ursu @Madness2aMaze (https://codepen.io/Madness2aMaze)
+
+- All Rights Reserved!
+
+MIT License
+
+Copyright (c) 2017-2018 Cătălin Anghel-Ursu (https://github.com/Madness2aMaze/Wikipedia-Viewer)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. */
+
+body {
+  background: rgb(0, 0, 0);
+}
+
+.main, .search-box {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 100px;
+}
+
+.min, .min-search-box {
+  margin: 0 auto;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#icon-box {
+  padding: 16px 1px 16px 1px;
+  box-shadow: 0px 0px 550px #0089ff;
+  border-radius: 150px;
+}
+
+#icon-link {
+  transition: .9s;
+  box-shadow: 0px 0px 50px rgb(255, 189, 25);
+  margin: 0 auto;
+  font-size: 132px;
+  color: rgb(255, 189, 25);
+  border-radius: 150px;
+  transition: .9s;
+  animation-name: fade;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+  background: #000;
+}
+@keyframes fade {
+  0%, 100% {
+    box-shadow: 0px 0px 50px rgb(255, 189, 25);
+    color: rgb(255, 189, 25);
+  }
+  50% {
+    box-shadow: none;
+    color: #014c8c;
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------------------------------------------*/
+
+#search-field {
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(255, 189, 25);
+  background: none;
+  padding: 5px;
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: 0px 3px 3px rgb(255, 189, 25);
+  border-right: none;
+  opacity: 1;
+  transition: .9s;
+}
+
+.random {
+  color: #014c8c;
+  position: relative;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 8px;
+  transition: .5s;
+  border-top: 2px rgb(255, 189, 25) solid;
+  border-radius: 25px;
+}
+.random:hover {
+  color: rgb(255, 189, 25);
+  transition: .5s;
+}
+
+button {
+  padding-right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #014c8c;
+  transition: .5s;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 0px 3px 3px rgb(255, 189, 25);
+}
+
+button:hover {
+  color: rgb(255, 189, 25);
+  transition: .5s;
+}
+
+button:focus {
+  outline: none !important;
+}
+.form-control {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.form-control:focus {
+  border: none;
+}
+
+.form-control::placeholder {
+  color: #555555;
+}
+
+.powered {
+  font-family: 'Ubuntu', sans-serif;
+  float: right;
+  font-size: 10px;
+  color: #555555;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10px;
+}
+
+.footer {
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 400px;
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.footbar {
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 50px;
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+#icon-fcc {
+  font-size: 20px;
+}
+
+#icon-cpen {
+  font-size: 20px;
+}
+
+a {
+  color: #014c8c;
+  transition: .5s;
+}
+
+a:hover {
+  color: rgb(255, 189, 25);
+  transition: .5s;
+  text-decoration: none;
+}
+
+h3 {
+  color: #fff;
+}
+
+h4 {
+  font-size: 16px;
+  color: #fff;
+}
+
+.results:hover {
+  transition: .5s;
+}
+
+.results p {
+  font-size: 14px;
+  color: #555555;
+  transition: .5s;
+}
+
+.results p:hover {
+  color: #fff;
+  transition: .5s;
+}
+
+.results li {
+  list-style-type: none;
+  transition: .5s;
+}
+
+.results li:hover {
+  border-left: 3px rgb(255, 189, 25) solid;
+  border-radius: 0px 0px 0px 25px;
+  transition: .5s;
+}
+
+.res-after li {
+  background: none;
+  border-bottom: 1px #555555 solid;
+  padding: 10px 0px 0px 10px;
+  transition: .5s;
+}
+
+.res-after li:hover {
+  border-bottom: 1px rgb(255, 189, 25) solid;
+  transition: .5s;
+}
+
+.list {
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 400px;
+}
+
+.listed {
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 400px;
+  padding: 20px 20px 20px 0px;
+  background-color: color|transparent;
+  transition: .5s;
+}
+
+a:focus {
+  text-decoration: none !important;
+}
+
